@@ -1,0 +1,110 @@
+<% include common/header.ejs %>
+
+<div class="">
+     <div class="main-container  container-fluid">
+    <div class="row order-page">
+        <div class="left-panel">
+            <div class="contact">
+                <div class="form-name">
+                    1. Контактні дані
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <form class="form-horizontal" name="form">
+                            <div class="form-group name">
+                                <label class="col-sm-2 control-label">Ім’я</label>
+                                <div class="col-sm-10">
+                                    <input name = "name" class="form-control" type="text" id="inputName" placeholder="Ім’я Фамілія" >
+                                </div>
+                                <span class="name-help-block" style="display:none">
+                                    Введіть тільки власне ім’я латинськими літерами, без цифр
+                                </span>
+                            </div>
+                            <div class="form-group phone">
+                                <label class="col-sm-2 control-label">Телефон</label>
+                                <div class="col-sm-10">
+                                    <input  name="phone" class="form-control" type="text" id="inputPhone" placeholder="0994010999" >
+                                </div>
+                                <span class="phone-help-block" style="display:none">
+                                    Введіть номер телефону у форматі 0666201942 
+                                </span>
+                            </div>
+                            <div class="form-group address">
+                                <label class="col-sm-2 control-label">Адреса</label>
+                                <div class="col-sm-10">
+                                    <input name ="address" class="form-control" type="text" id="inputAdress" placeholder="Київ, вул. Спаська, 2">
+                                </div>
+                                <span class="address-help-block" style="display:none">
+                                    Введіть адресу доставки піци
+                                </span>
+                            </div>
+                            
+                                
+                            <div class="form-group next-step-wrap" id="data-submit">
+                                <div class="next-step-width">
+                                    <button  type="button" class="btn btn-warning btn-block next-step-button">
+                                            Далі
+                                    <i class="glyphicon glyphicon-chevron-right icon-white">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 order-summary">
+                        <div class=" bs-callout bs-callout-warning">
+                            <h4>Інформація про замовлення</h4>
+                            <p class="order-summery-time">
+                                <b>Приблизний час доставки:</b> <span id="time">невідомий</span>
+                            </p>
+                            <p class="order-summery-adress">
+                                <b>Адреса доставки:</b> <span id="myAdress">невідома</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        
+    
+        <div class="right-panel">
+                <div class="r1">
+                <span class="order-list-title">
+                    Замовлення
+                    <span class="badge orange orders-count-span" id="order-count">0</span>
+                </span>
+        
+                <span class="clear-order-wrap clear-order" id="clear">
+                    Очистити замовлення
+                </span>
+        
+                </div>
+        <div class="all-orders r2" id="right-cart">
+        </div>
+
+    <div class="order-state r3">
+                <span class="sum-title" style="">
+                    Сума замовлення
+                </span>
+                <span class="sum-number" style="">0</span>
+                    <div class="do-order-button">
+            
+            <button type="button" class="btn btn-warning btn-lg btn-block button-order" id="order" onClick="window.open('http://localhost:5050')">
+               Редагувати замовлення
+            </button>
+            
+                    </div>
+
+    </div>
+    </div>
+            <div class="google-maps" id="googleMap"></div>
+</div>
+</div>
+
+ <!-- місце для віджету -->
+<div	id="liqpay"></div>
+<!-- піключаємо скрипт -->
+<script	src="//static.liqpay.com/libjs/checkout.js">
+</script>
+
+<% include common/footer.ejs %>

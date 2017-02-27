@@ -1,0 +1,90 @@
+<% include common/header.ejs %>
+
+<div class="">
+      <div class="main-container container-fluid">
+        <div class="nav-row">
+                 
+            <div class="row-title">
+                <h2>
+                    <span class="all-title" id="type-pizza-text" >Усі піци</span>
+                    <span class="badge orange count-title" id="pizzas-count">8</span>
+                </h2>
+            </div>
+            
+            <div class="all-pizza-wrap">
+                <ul class="nav nav-pills all-pizza-type">
+                    <li role="presentation" class="active pizza-filter-button" id="all-pizzas">
+                    <a href="#" id="all">Усі</a>
+                    </li>
+                    
+                    <li role="presentation" class=" nonactive pizza-filter-button" id="meat-pizzas">
+                    <a href="#" id="meat">Мясні</a>
+                    </li>
+                    
+                    <li role="presentation" class="nonactive pizza-filter-button" id="pineapples-pizzas">
+                    <a href="#" id="pineapple">З ананасами</a>
+                    </li>
+                    
+                    <li role="presentation" class=" nonactive pizza-filter-button" id="mashrooms-pizzas">
+                    <a href="#" id="mushroom">З грибами</a>
+                    </li>
+                    
+                    <li role="presentation" class="pizza-filter-button" id="ocean-pizzas">
+                    <a href="#" id="ocean">З морепродуктами</a>
+                    </li>
+                    
+                    <li role="presentation" class="pizza-filter-button" id="vegeterian-pizzas">
+                    <a href="#" id="tomato">Вегa</a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </div>
+             </div>
+  
+                 
+    
+
+           <div class="container-box">
+               <div class="row" id="pizza_list">
+                   <div class="left-panel">
+           
+                    </div>
+               </div>
+            </div>                
+    
+        <div class="right-panel">
+                <div class="r1">
+                <span class="order-list-title">
+                    Замовлення
+                    <span class="badge orange orders-count-span" id="order-count">0</span>
+                </span>
+        
+                <span class="clear-order-wrap clear-order" id="clear">
+                    Очистити замовлення
+                </span>
+        
+                </div>
+        <div class="all-orders r2" id="right-cart">
+        </div>
+
+    <div class="order-state r3">
+                <span class="sum-title" style="">
+                    Сума замовлення
+                </span>
+                <span class="sum-number" style="">0</span>
+                    <div class="do-order-button">
+            
+            <button type="button" class="btn btn-warning btn-lg btn-block button-order" id="order" onClick="window.open('http://localhost:5050/order.html')">
+                Замовити
+            </button>
+            
+        </div>
+
+    </div>
+    </div>
+              </div>
+</div>
+
+<% include common/footer.ejs %>
